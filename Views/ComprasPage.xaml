@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoEcuniShopP2.Views.ComprasPage"
+             BackgroundColor="#ffac28"
+             Title="Compras">
+    <ScrollView>
+        <VerticalStackLayout Spacing="10" Margin="20">
+            <Frame BackgroundColor="#033454" CornerRadius="20" Padding="10" HasShadow="True">
+                <Label Text="Comprar Producto"
+            FontFamily="Verdana"
+            FontSize="24"
+            FontAttributes="Bold"
+            HorizontalOptions="Center"
+            VerticalOptions="Center" />
+            </Frame>
+            <Label Text="Aquí se muestra el producto seleccionado para ser comprado"
+        FontFamily="Verdana"
+        TextColor="Black"
+        FontSize="20"
+        HorizontalOptions="Start"
+        VerticalOptions="Start" />
+            <BoxView HeightRequest="5" Color="Transparent" />
+            <Frame BackgroundColor="#033454" CornerRadius="20" Padding="10" HasShadow="True">
+                <Label Text="Datos del Producto"
+            FontFamily="Verdana"
+            FontSize="24"
+            FontAttributes="Bold"
+            HorizontalOptions="Center"
+            VerticalOptions="Center" />
+            </Frame>
+            <Entry x:Name="NombreProductoEntry" Placeholder="Nombre del Producto" BackgroundColor="#BCBEBE"/>
+            <Picker x:Name="CategoriaPicker" Title="Categoría" BackgroundColor="#BCBEBE" TextColor="Black">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Entretenimiento</x:String>
+                        <x:String>Electrodomésticos</x:String>
+                        <x:String>Servicios</x:String>
+                        <x:String>Vestimenta</x:String>
+                        <x:String>Descuentos</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            <Picker x:Name="CantidadPicker" Title="Cantidad" BackgroundColor="#BCBEBE" TextColor="Black">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:Int32}">
+                        <x:Int32>1</x:Int32>
+                        <x:Int32>2</x:Int32>
+                        <x:Int32>3</x:Int32>
+                        <x:Int32>4</x:Int32>
+                        <x:Int32>5</x:Int32>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            <Entry x:Name="PrecioEntry" Placeholder="Precio" Keyboard="Numeric" BackgroundColor="#BCBEBE"/>
+            <HorizontalStackLayout Spacing="10">
+                <Button Text="Confirmar" Clicked="OnConfirmClicked" TextColor="White" BackgroundColor="#033454"/>
+                <Button Text="Ver Historial" Clicked="OnVerHistorialClicked" TextColor="White" BackgroundColor="#033454" />
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

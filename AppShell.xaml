@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:local="clr-namespace:ProyectoEcuniShopP2"
+       xmlns:views="clr-namespace:ProyectoEcuniShopP2.Views"
+       x:Class="ProyectoEcuniShopP2.AppShell">
+
+    <TabBar>
+        <Tab Title="Inicio" Icon="casa.png">
+            <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
+        </Tab>
+        <Tab Title="Conocenos" Icon="info.png">
+            <ShellContent ContentTemplate="{DataTemplate views:AcercaDe}" />
+        </Tab>
+        <Tab Title="Catálogo" Icon="revista.png">
+            <ShellContent ContentTemplate="{DataTemplate views:Catalogo}" />
+        </Tab>
+        <ShellContent
+            Title="Compras"
+            ContentTemplate="{DataTemplate views:ComprasPage}"
+            Icon="carrito.png" />
+    </TabBar>
+
+</Shell>
